@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Coach</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#17302A}a:hover{color:#C8102E}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #C8102E;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #EEF0EB; color: #17302A; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; display: flex; flex-direction: column">
+  <header style="padding: 24px 20px 12px; display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 1px solid #D5DBD3">
+    <h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1">Coach</h1>
+    <span style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #2F5D50"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg>Läuft lokal auf deinem Laptop</span>
+  </header>
+
+  <main style="flex: 1; min-height: 0; overflow-y: auto; padding: 16px 16px 12px; display: flex; flex-direction: column; gap: 12px">
+    <div style="align-self: flex-end; max-width: 80%; padding: 11px 14px; border-radius: 18px 18px 4px 18px; background: #17302A; color: #FFFFFF; font-size: 15px; line-height: 1.4">Mein Knie zwickt seit Sonntag ein bisschen. Soll ich heute trotzdem laufen?</div>
+
+    <div style="align-self: flex-start; max-width: 88%; display: flex; flex-direction: column; gap: 8px">
+      <div style="padding: 12px 14px; border-radius: 18px 18px 18px 4px; background: #FFFFFF; font-size: 15px; line-height: 1.45">Du meldest das Knie jetzt zum zweiten Mal in einer Woche, deshalb bleibt es heute bei 4 km locker auf flachem Untergrund. Hör auf, wenn der Schmerz beim Laufen stärker wird. Hält er mehrere Tage an oder spürst du ihn schon beim Gehen, lass es ärztlich abklären.</div>
+      <p style="margin: 0 4px; font-size: 12px; line-height: 1.4; color: #56635E">Grundlage: 2 Schmerzmeldungen in 7 Tagen, Belastung 1,3-mal so hoch wie dein 4-Wochen-Schnitt</p>
+    </div>
+
+    <section aria-labelledby="vorschlag" style="align-self: flex-start; width: 88%; box-sizing: border-box; padding: 14px; border-radius: 16px; background: #FFFFFF; border: 2px solid #D9A441; display: flex; flex-direction: column; gap: 10px">
+      <h2 id="vorschlag" style="margin: 0; font-size: 14px; font-weight: 650; color: #6B4A00">Vorschlag für deinen Plan</h2>
+      <p style="margin: 0; font-size: 15px; line-height: 1.4">Donnerstag Tempolauf 4 km statt Intervalle 6 × 400 m</p>
+      <sc-if value="{{ open }}" hint-placeholder-val="{{ true }}">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+          <button type="button" onClick="{{ accept }}" style="min-height: 44px; border: 0; border-radius: 12px; background: #17302A; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 650; cursor: pointer">Übernehmen</button>
+          <button type="button" onClick="{{ decline }}" style="min-height: 44px; border: 1px solid #C9D0C7; border-radius: 12px; background: #FFFFFF; color: #17302A; font: inherit; font-size: 15px; cursor: pointer">Ablehnen</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ accepted }}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 0; font-size: 14px; color: #2F5D50; display: flex; align-items: center; gap: 6px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Übernommen. Dein Plan für Donnerstag ist aktualisiert.</p>
+      </sc-if>
+      <sc-if value="{{ declined }}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 0; font-size: 14px; color: #56635E">Abgelehnt. Donnerstag bleiben die Intervalle.</p>
+      </sc-if>
+    </section>
+
+    <div style="align-self: flex-end; max-width: 80%; padding: 11px 14px; border-radius: 18px 18px 4px 18px; background: #17302A; color: #FFFFFF; font-size: 15px; line-height: 1.4">Welche Laufschuhe sind gut, wenn das Knie Probleme macht?</div>
+
+    <div style="align-self: flex-start; max-width: 88%; display: flex; flex-direction: column; gap: 10px; padding: 12px 14px; border-radius: 18px 18px 18px 4px; background: #FFFFFF">
+      <p style="margin: 0; font-size: 15px; line-height: 1.45">Zu Laufschuhen weiß ich lokal zu wenig, um dir verlässlich zu antworten. Ich kann die Frage ohne persönliche Angaben an einen externen Dienst schicken.</p>
+      <a href="Freigabe.dc.html" style="align-self: flex-start; display: flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid #17302A; text-decoration: none; font-size: 15px; font-weight: 600">Ansehen, was gesendet wird</a>
+    </div>
+  </main>
+
+  <form onSubmit="{{ send }}" style="margin: 0; padding: 10px 12px; display: flex; align-items: center; gap: 8px; background: #FFFFFF; border-top: 1px solid #D5DBD3">
+    <label for="nachricht" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Nachricht an den Coach</label>
+    <input id="nachricht" type="text" placeholder="Frag deinen Coach" style="flex: 1; min-width: 0; height: 44px; box-sizing: border-box; padding: 0 14px; border: 1px solid #C9D0C7; border-radius: 22px; background: #EEF0EB; color: #17302A; font: inherit; font-size: 15px">
+    <button type="button" aria-label="Spracheingabe" style="width: 44px; height: 44px; flex: none; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 22px; background: #EEF0EB; color: #17302A; cursor: pointer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></button>
+    <button type="submit" aria-label="Senden" style="width: 44px; height: 44px; flex: none; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 22px; background: #C8102E; color: #FFFFFF; cursor: pointer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+  </form>
+
+  <nav aria-label="Hauptnavigation" style="height: 72px; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #D5DBD3; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 6px 8px 12px">
+    <a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>Heute</a>
+    <a href="Plan.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"></rect><path d="M8 2v4M16 2v4M4 10h16"></path></svg>Plan</a>
+    <a href="Coach.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #17302A; font-size: 12px; font-weight: 700">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"></path></svg>Coach</a>
+    <a href="Verlauf.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M2 20h20"></path></svg>Verlauf</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { choice: 'open' };
+  }
+  renderVals() {
+    var self = this;
+    var c = this.state.choice;
+    return {
+      open: c === 'open',
+      accepted: c === 'accepted',
+      declined: c === 'declined',
+      accept: function () { self.setState({ choice: 'accepted' }); },
+      decline: function () { self.setState({ choice: 'declined' }); },
+      send: function (e) { if (e && e.preventDefault) e.preventDefault(); }
+    };
+  }
+}
+</script>
+</body>
+</html>

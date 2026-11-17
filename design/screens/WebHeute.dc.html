@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Web: Heute</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#17302A}a:hover{color:#C8102E}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #C8102E;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height: 1000px; box-sizing: border-box; background: #EEF0EB; color: #17302A; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; display: flex; flex-wrap: wrap; align-items: stretch">
+  <aside style="flex: 1 1 200px; box-sizing: border-box; padding: 28px 16px; background: #FFFFFF; border-right: 1px solid #D5DBD3; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 12px">
+      <span aria-hidden="true" style="display: inline-flex; flex-direction: column; width: 22px; height: 15px; border-radius: 2px; overflow: hidden; box-shadow: 0 0 0 1px #C8102E"><span style="flex: 1; background: #C8102E"></span><span style="flex: 1; background: #FFFFFF"></span><span style="flex: 1; background: #C8102E"></span></span>
+      <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 24px">Trainingscoach</span>
+    </div>
+    <nav aria-label="Hauptnavigation" style="display: flex; flex-direction: column; gap: 2px">
+      <a href="WebHeute.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; background: #EEF0EB; text-decoration: none; color: #17302A; font-size: 15px; font-weight: 650"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>Heute</a>
+      <a href="Plan.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; text-decoration: none; color: #2B3F39; font-size: 15px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"></rect><path d="M8 2v4M16 2v4M4 10h16"></path></svg>Wochenplan</a>
+      <a href="WebKraft.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; text-decoration: none; color: #2B3F39; font-size: 15px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"></path></svg>Krafttraining</a>
+      <a href="Coach.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; text-decoration: none; color: #2B3F39; font-size: 15px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"></path></svg>Coach</a>
+      <a href="Verlauf.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; text-decoration: none; color: #2B3F39; font-size: 15px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M2 20h20"></path></svg>Verlauf</a>
+    </nav>
+    <p style="margin: auto 0 0; padding: 0 12px; display: flex; align-items: center; gap: 8px; font-size: 13px; line-height: 1.4; color: #2F5D50"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg>Läuft lokal auf diesem Laptop</p>
+  </aside>
+
+  <div style="flex: 999 1 640px; min-width: 0; box-sizing: border-box; padding: 36px 32px 56px">
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+      <main style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+        <section aria-labelledby="heute" style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 15px; color: #56635E">Dienstag, 17. November</span>
+          <h1 id="heute" style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 104px; line-height: 0.88; letter-spacing: -0.01em">4 km locker</h1>
+          <p style="margin: 4px 0 0; font-size: 19px">Tempo 6:10 bis 6:40 pro km, etwa 26 Minuten</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px">
+            <button type="button" style="display: flex; align-items: center; gap: 8px; height: 48px; padding: 0 22px; border: 0; border-radius: 12px; background: #C8102E; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 650; cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Lauf eintragen</button>
+            <button type="button" style="height: 48px; padding: 0 18px; border: 1px solid #A9B2AC; border-radius: 12px; background: transparent; color: #17302A; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer">GPX- oder FIT-Datei laden</button>
+          </div>
+        </section>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 16px">
+          <section aria-labelledby="warum" style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <h2 id="warum" style="margin: 0; font-size: 16px; font-weight: 650">Warum heute kurz und locker</h2>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #2B3F39">Den langen Lauf am Sonntag hast du mit 8 von 10 bewertet und dabei Knieschmerzen gemeldet. Ein lockerer Tag gibt dir Zeit, dich bis zum Tempolauf am Donnerstag zu erholen.</p>
+          </section>
+          <a href="WebKraft.dc.html" style="flex: 1 1 260px; background: #E4E9EF; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: #17302A">
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 650"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3E5163" stroke-width="2" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"></path></svg>Nächstes Krafttraining: Mittwoch</span>
+            <span style="font-size: 15px; line-height: 1.5; color: #2B3F39">Oberkörper und Rumpf, 4 Übungen, etwa 40 Minuten. Die Beine trainierst du am Freitag, nach dem Tempolauf.</span>
+            <span style="margin-top: auto; font-size: 14px; font-weight: 600; color: #3E5163">Übungen ansehen</span>
+          </a>
+        </div>
+
+        <section aria-labelledby="woche" style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 18px">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px">
+            <h2 id="woche" style="margin: 0; font-size: 16px; font-weight: 650">Diese Woche</h2>
+            <span style="font-size: 15px; color: #56635E"><strong style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 24px; color: #17302A">4</strong> von 21 km, 0 von 2 Krafteinheiten</span>
+          </div>
+          <div role="img" aria-label="Wochenplan: Montag 4 km locker erledigt, heute 4 km locker, Mittwoch Kraft Oberkörper, Donnerstag 4 km Tempo, Freitag Kraft Beine und Rumpf, Samstag 3 km locker, Sonntag 6 km lang" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+              <div style="height: 150px; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center"><div style="width: 100%; max-width: 56px; height: 88px; border-radius: 8px; background: #B9CC85"></div></div>
+              <span style="font-size: 14px; font-weight: 600">Mo 16.</span><span style="font-size: 13px; color: #56635E">4 km erledigt</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+              <div style="height: 150px; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 8px">
+                <span aria-hidden="true" style="display: inline-flex; flex-direction: column; width: 22px; height: 15px; border-radius: 2px; overflow: hidden; box-shadow: 0 0 0 1px #C8102E"><span style="flex: 1; background: #C8102E"></span><span style="flex: 1; background: #FFFFFF"></span><span style="flex: 1; background: #C8102E"></span></span>
+                <div style="width: 100%; max-width: 56px; height: 88px; box-sizing: border-box; border-radius: 8px; background: #E6EDD3; border: 2px solid #17302A"></div>
+              </div>
+              <span style="font-size: 14px; font-weight: 700; color: #C8102E">Di 17.</span><span style="font-size: 13px; font-weight: 600">4 km heute</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+              <div style="height: 150px; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center"><div style="width: 100%; max-width: 56px; height: 44px; box-sizing: border-box; border-radius: 8px; background: #DDE3EA; border: 2px solid #5C7186; display: flex; align-items: center; justify-content: center; color: #3E5163"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"></path></svg></div></div>
+              <span style="font-size: 14px; font-weight: 600">Mi 18.</span><span style="font-size: 13px; color: #56635E">Kraft 40 Min</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+              <div style="height: 150px; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center"><div style="width: 100%; max-width: 56px; height: 88px; box-sizing: border-box; border-radius: 8px; background: #F5E7C6; border: 2px solid #D9A441"></div></div>
+              <span style="font-size: 14px; font-weight: 600">Do 19.</span><span style="font-size: 13px; color: #56635E">4 km Tempo</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+              <div style="height: 150px; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center"><div style="width: 100%; max-width: 56px; height: 44px; box-sizing: border-box; border-radius: 8px; background: #DDE3EA; border: 2px solid #5C7186; display: flex; align-items: center; justify-content: center; color: #3E5163"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"></path></svg></div></div>
+              <span style="font-size: 14px; font-weight: 600">Fr 20.</span><span style="font-size: 13px; color: #56635E">Kraft 45 Min</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+              <div style="height: 150px; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center"><div style="width: 100%; max-width: 56px; height: 66px; box-sizing: border-box; border-radius: 8px; background: #E6EDD3; border: 2px solid #B9CC85"></div></div>
+              <span style="font-size: 14px; font-weight: 600">Sa 21.</span><span style="font-size: 13px; color: #56635E">3 km locker</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+              <div style="height: 150px; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center"><div style="width: 100%; max-width: 56px; height: 132px; box-sizing: border-box; border-radius: 8px; background: #D3E0DC; border: 2px solid #2F5D50"></div></div>
+              <span style="font-size: 14px; font-weight: 600">So 22.</span><span style="font-size: 13px; color: #56635E">6 km lang</span>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; color: #56635E">
+            <span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 3px; background: #B9CC85"></span>Locker</span>
+            <span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 3px; background: #D9A441"></span>Tempo</span>
+            <span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 3px; background: #2F5D50"></span>Lang</span>
+            <span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 3px; background: #5C7186"></span>Kraft</span>
+            <span>Volle Farbe: erledigt</span>
+          </div>
+        </section>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 16px">
+          <section aria-labelledby="km" style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+            <h2 id="km" style="margin: 0; font-size: 16px; font-weight: 650">Kilometer pro Woche</h2>
+            <div role="img" aria-label="KW 43 13 km, KW 44 15 km, KW 45 17 km, KW 46 19 km, diese Woche 21 km geplant" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; align-items: end; height: 120px; border-bottom: 1px solid #A9B2AC">
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 13px; font-weight: 600">13</span><div style="width: 100%; height: 59px; border-radius: 5px 5px 0 0; background: #2F5D50"></div></div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 13px; font-weight: 600">15</span><div style="width: 100%; height: 68px; border-radius: 5px 5px 0 0; background: #2F5D50"></div></div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 13px; font-weight: 600">17</span><div style="width: 100%; height: 77px; border-radius: 5px 5px 0 0; background: #2F5D50"></div></div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 13px; font-weight: 600">19</span><div style="width: 100%; height: 86px; border-radius: 5px 5px 0 0; background: #2F5D50"></div></div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 13px; font-weight: 600">21</span><div style="width: 100%; height: 96px; box-sizing: border-box; border-radius: 5px 5px 0 0; background: #D3E0DC; border: 2px solid #2F5D50; border-bottom: 0"></div></div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; font-size: 12px; color: #56635E; text-align: center"><span>KW 43</span><span>KW 44</span><span>KW 45</span><span>KW 46</span><span>Diese</span></div>
+          </section>
+          <section aria-labelledby="last" style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px">
+              <h2 id="last" style="margin: 0; font-size: 16px; font-weight: 650">Belastung</h2>
+              <span style="font-size: 13px; color: #56635E"><strong style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 30px; color: #17302A">1,3</strong> × dein Schnitt</span>
+            </div>
+            <div style="position: relative; padding-top: 6px">
+              <div aria-hidden="true" style="display: flex; height: 12px; border-radius: 6px; overflow: hidden"><span style="flex: 20; background: #DDE2DA"></span><span style="flex: 33; background: #B9CC85"></span><span style="flex: 14; background: #D9A441"></span><span style="flex: 33; background: #E7A3AD"></span></div>
+              <span aria-hidden="true" style="position: absolute; left: 53%; top: 0; width: 4px; height: 24px; margin-left: -2px; border-radius: 2px; background: #17302A"></span>
+              <div style="display: flex; margin-top: 8px; font-size: 12px; color: #56635E"><span style="flex: 20">wenig</span><span style="flex: 33">im Rahmen</span><span style="flex: 14">erhöht</span><span style="flex: 33; text-align: right">hoch</span></div>
+            </div>
+            <p style="margin: 0; font-size: 14px; line-height: 1.45; color: #2B3F39">Lauf und Kraft zusammen: die letzten 7 Tage waren 30 % intensiver als dein 4-Wochen-Schnitt. Der Coach steigert diese Woche nur leicht.</p>
+          </section>
+        </div>
+      </main>
+
+      <aside aria-labelledby="coach" style="flex: 1 1 320px; min-width: 0; background: #FFFFFF; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px">
+          <h2 id="coach" style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 32px; line-height: 1">Coach</h2>
+          <span style="font-size: 12px; color: #2F5D50">lokal</span>
+        </div>
+        <div style="align-self: flex-end; max-width: 85%; padding: 10px 13px; border-radius: 16px 16px 4px 16px; background: #17302A; color: #FFFFFF; font-size: 14px; line-height: 1.4">Mein Knie zwickt seit Sonntag. Soll ich heute trotzdem laufen?</div>
+        <div style="align-self: flex-start; max-width: 92%; padding: 11px 13px; border-radius: 16px 16px 16px 4px; background: #EEF0EB; font-size: 14px; line-height: 1.45">Heute nur 4 km locker und flach. Hör auf, wenn der Schmerz stärker wird. Am Freitag tausche ich die Kniebeugen gegen Wandsitzen.</div>
+        <p style="margin: -6px 2px 0; font-size: 12px; line-height: 1.4; color: #56635E">Grundlage: 2 Schmerzmeldungen in 7 Tagen</p>
+        <section aria-labelledby="vorschlag" style="padding: 14px; border-radius: 14px; border: 2px solid #D9A441; display: flex; flex-direction: column; gap: 10px">
+          <h3 id="vorschlag" style="margin: 0; font-size: 13px; font-weight: 650; color: #6B4A00">Vorschlag für deinen Plan</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 1.4">Donnerstag Tempolauf 4 km statt Intervalle 6 × 400 m</p>
+          <div style="display: flex; gap: 8px">
+            <button type="button" style="flex: 1; min-height: 44px; border: 0; border-radius: 10px; background: #17302A; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 650; cursor: pointer">Übernehmen</button>
+            <button type="button" style="flex: 1; min-height: 44px; border: 1px solid #C9D0C7; border-radius: 10px; background: #FFFFFF; color: #17302A; font: inherit; font-size: 14px; cursor: pointer">Ablehnen</button>
+          </div>
+        </section>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px">
+          <label for="web-nachricht" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Nachricht an den Coach</label>
+          <input id="web-nachricht" type="text" placeholder="Frag deinen Coach" style="flex: 1; min-width: 0; height: 44px; box-sizing: border-box; padding: 0 14px; border: 1px solid #C9D0C7; border-radius: 22px; background: #EEF0EB; color: #17302A; font: inherit; font-size: 14px">
+          <button type="button" aria-label="Senden" style="width: 44px; height: 44px; flex: none; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 22px; background: #C8102E; color: #FFFFFF; cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

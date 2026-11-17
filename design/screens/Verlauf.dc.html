@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Verlauf</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#17302A}a:hover{color:#C8102E}
+a:focus-visible,button:focus-visible{outline:3px solid #C8102E;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #EEF0EB; color: #17302A; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; display: flex; flex-direction: column">
+  <main style="flex: 1; min-height: 0; overflow-y: auto; padding: 28px 20px 20px; display: flex; flex-direction: column; gap: 22px">
+    <h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 44px; line-height: 1">Verlauf</h1>
+
+    <section aria-labelledby="umfang" style="display: flex; flex-direction: column; gap: 12px">
+      <h2 id="umfang" style="margin: 0; font-size: 15px; font-weight: 650">Kilometer pro Woche</h2>
+      <div role="img" aria-label="Wochenumfang: KW 43 13 km, KW 44 15 km, KW 45 17 km, KW 46 19 km, KW 47 21 km geplant" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; align-items: end; height: 176px; border-bottom: 1px solid #A9B2AC">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 18px; font-weight: 600">13</span><div style="width: 100%; height: 87px; border-radius: 6px 6px 0 0; background: #2F5D50"></div></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 18px; font-weight: 600">15</span><div style="width: 100%; height: 100px; border-radius: 6px 6px 0 0; background: #2F5D50"></div></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 18px; font-weight: 600">17</span><div style="width: 100%; height: 113px; border-radius: 6px 6px 0 0; background: #2F5D50"></div></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 18px; font-weight: 600">19</span><div style="width: 100%; height: 127px; border-radius: 6px 6px 0 0; background: #2F5D50"></div></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 18px; font-weight: 600">21</span><div style="width: 100%; height: 140px; box-sizing: border-box; border-radius: 6px 6px 0 0; background: #D3E0DC; border: 2px solid #2F5D50; border-bottom: 0; display: flex; flex-direction: column; justify-content: flex-end"><div style="height: 27px; background: #2F5D50"></div></div></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: -4px; font-size: 12px; color: #56635E; text-align: center">
+        <span>KW 43</span><span>KW 44</span><span>KW 45</span><span>KW 46</span><span style="color: #17302A; font-weight: 600">Diese</span>
+      </div>
+      <p style="margin: 0; font-size: 13px; color: #56635E">Diese Woche: 4 von 21 geplanten Kilometern gelaufen.</p>
+    </section>
+
+    <section aria-labelledby="belastung" style="background: #FFFFFF; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
+        <h2 id="belastung" style="margin: 0; font-size: 15px; font-weight: 650">Belastung</h2>
+        <span style="font-size: 13px; color: #56635E"><strong style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 32px; color: #17302A; font-variant-numeric: tabular-nums">1,3</strong> × dein Schnitt</span>
+      </div>
+      <div style="position: relative; padding-top: 6px">
+        <div aria-hidden="true" style="display: flex; height: 12px; border-radius: 6px; overflow: hidden">
+          <span style="flex: 20; background: #DDE2DA"></span>
+          <span style="flex: 33; background: #B9CC85"></span>
+          <span style="flex: 14; background: #D9A441"></span>
+          <span style="flex: 33; background: #E7A3AD"></span>
+        </div>
+        <span aria-hidden="true" style="position: absolute; left: 53%; top: 0; width: 4px; height: 24px; margin-left: -2px; border-radius: 2px; background: #17302A"></span>
+        <div style="display: flex; margin-top: 8px; font-size: 11px; color: #56635E">
+          <span style="flex: 20">wenig</span>
+          <span style="flex: 33">im Rahmen</span>
+          <span style="flex: 14">erhöht</span>
+          <span style="flex: 33; text-align: right">hoch</span>
+        </div>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.45; color: #2B3F39">Deine letzten 7 Tage waren 30 % intensiver als dein Schnitt der letzten 4 Wochen. Das ist die Obergrenze des sicheren Bereichs, deshalb steigert der Coach diese Woche nur leicht.</p>
+      <p style="margin: 0; font-size: 12px; color: #56635E">Faustregel aus der Trainingslehre, kein medizinischer Wert.</p>
+    </section>
+
+    <section aria-labelledby="laeufe" style="display: flex; flex-direction: column; gap: 8px">
+      <h2 id="laeufe" style="margin: 0; font-size: 15px; font-weight: 650">Letzte Läufe</h2>
+      <div style="background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column">
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 56px; padding: 0 14px; border-bottom: 1px solid #E3E7E1">
+          <span style="font-size: 13px; color: #56635E">Mo 16.11.</span>
+          <span style="font-size: 15px">4,0 km locker</span>
+          <span style="font-size: 13px; color: #56635E">Anstrengung 3</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 56px; padding: 0 14px; border-bottom: 1px solid #E3E7E1">
+          <span style="font-size: 13px; color: #56635E">So 15.11.</span>
+          <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 15px">6,0 km lang<span style="padding: 2px 8px; border-radius: 10px; background: #FFF1DD; color: #7A3A05; font-size: 12px; font-weight: 600">Knie</span></span>
+          <span style="font-size: 13px; color: #56635E">Anstrengung 8</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 56px; padding: 0 14px; border-bottom: 1px solid #E3E7E1">
+          <span style="font-size: 13px; color: #56635E">Fr 13.11.</span>
+          <span style="font-size: 15px">4,0 km locker</span>
+          <span style="font-size: 13px; color: #56635E">Anstrengung 4</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 56px; padding: 0 14px">
+          <span style="font-size: 13px; color: #56635E">Mi 11.11.</span>
+          <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 15px">5,0 km Tempo<span style="padding: 2px 8px; border-radius: 10px; background: #FFF1DD; color: #7A3A05; font-size: 12px; font-weight: 600">Knie</span></span>
+          <span style="font-size: 13px; color: #56635E">Anstrengung 7</span>
+        </div>
+      </div>
+      <p style="margin: 4px 0 0; font-size: 12px; color: #56635E">Alle Läufe liegen nur auf deinem Laptop.</p>
+    </section>
+  </main>
+
+  <nav aria-label="Hauptnavigation" style="height: 72px; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #D5DBD3; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 6px 8px 12px">
+    <a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>Heute</a>
+    <a href="Plan.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"></rect><path d="M8 2v4M16 2v4M4 10h16"></path></svg>Plan</a>
+    <a href="Coach.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"></path></svg>Coach</a>
+    <a href="Verlauf.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #17302A; font-size: 12px; font-weight: 700">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M2 20h20"></path></svg>Verlauf</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

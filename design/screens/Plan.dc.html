@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Wochenplan</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#17302A}a:hover{color:#C8102E}
+a:focus-visible,button:focus-visible{outline:3px solid #C8102E;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #EEF0EB; color: #17302A; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; display: flex; flex-direction: column">
+  <main style="flex: 1; min-height: 0; overflow-y: auto; padding: 28px 20px 20px; display: flex; flex-direction: column; gap: 20px">
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 44px; line-height: 1">Woche 3 von 8</h1>
+      <p style="margin: 0; font-size: 15px; color: #56635E">Ziel: 10 km am 10. Jänner</p>
+    </div>
+
+    <sc-if value="{{ changed }}" hint-placeholder-val="{{ true }}">
+      <section aria-labelledby="angepasst" style="background: #FBF0D9; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+        <h2 id="angepasst" style="margin: 0; font-size: 15px; font-weight: 650">Plan angepasst am Montag</h2>
+        <p style="margin: 0; font-size: 15px; line-height: 1.45">Donnerstag: <span style="text-decoration: line-through; color: #6B5A3A">Intervalle 6 × 400 m</span> wird zu <strong>Tempolauf 4 km</strong>.</p>
+        <p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A3D24">Du hast in 7 Tagen zweimal Knieschmerzen gemeldet. Kurze, schnelle Intervalle belasten das Knie stärker als ein gleichmäßiger Tempolauf.</p>
+        <button type="button" onClick="{{ undo }}" style="align-self: flex-start; min-height: 44px; padding: 0 14px; margin-top: 2px; border: 1px solid #B8955A; border-radius: 12px; background: transparent; color: #4A3D24; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Änderung rückgängig machen</button>
+      </section>
+    </sc-if>
+    <sc-if value="{{ reverted }}" hint-placeholder-val="{{ false }}">
+      <section style="background: #FFFFFF; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+        <p style="margin: 0; font-size: 15px; line-height: 1.45">Donnerstag ist wieder <strong>Intervalle 6 × 400 m</strong>. Der Coach fragt nach dem Lauf, wie sich das Knie anfühlt.</p>
+        <button type="button" onClick="{{ redo }}" style="align-self: flex-start; min-height: 44px; padding: 0 14px; border: 1px solid #C9D0C7; border-radius: 12px; background: transparent; color: #17302A; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Doch Tempolauf übernehmen</button>
+      </section>
+    </sc-if>
+
+    <section aria-label="Einheiten dieser Woche" style="background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column">
+      <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 60px; padding: 0 16px; border-bottom: 1px solid #E3E7E1">
+        <span style="font-size: 14px; color: #56635E">Mo 16.</span>
+        <span style="display: flex; align-items: center; gap: 8px; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: #B9CC85"></span>Locker</span>
+        <span style="display: flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums">4 km<svg role="img" aria-label="erledigt" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F5D50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg></span>
+      </div>
+      <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 60px; padding: 0 16px; border-bottom: 1px solid #E3E7E1; background: #F3F6EC">
+        <span style="font-size: 14px; font-weight: 700; color: #C8102E">Di 17.</span>
+        <span style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: #B9CC85"></span>Locker, heute</span>
+        <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums">4 km</span>
+      </div>
+      <a href="Kraft.dc.html" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 60px; padding: 0 16px; border-bottom: 1px solid #E3E7E1; text-decoration: none; color: #17302A">
+        <span style="font-size: 14px; color: #56635E">Mi 18.</span>
+        <span style="display: flex; align-items: center; gap: 8px; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: #5C7186"></span>Kraft: Oberkörper</span>
+        <span style="display: flex; align-items: center; gap: 4px; font-size: 14px; color: #56635E">40 Min<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
+      </a>
+      <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 64px; padding: 8px 16px; box-sizing: border-box; border-bottom: 1px solid #E3E7E1">
+        <span style="font-size: 14px; color: #56635E">Do 19.</span>
+        <span style="display: flex; flex-direction: column; gap: 2px">
+          <span style="display: flex; align-items: center; gap: 8px; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: {{ thuColor }}"></span>{{ thuLabel }}</span>
+          <span style="font-size: 12px; color: #8A5A00; padding-left: 20px">{{ thuNote }}</span>
+        </span>
+        <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums">{{ thuKm }}</span>
+      </div>
+      <a href="Kraft.dc.html" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 64px; padding: 8px 16px; box-sizing: border-box; border-bottom: 1px solid #E3E7E1; text-decoration: none; color: #17302A">
+        <span style="font-size: 14px; color: #56635E">Fr 20.</span>
+        <span style="display: flex; flex-direction: column; gap: 2px">
+          <span style="display: flex; align-items: center; gap: 8px; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: #5C7186"></span>Kraft: Beine und Rumpf</span>
+          <span style="font-size: 12px; color: #8A5A00; padding-left: 20px">Knieschonend angepasst</span>
+        </span>
+        <span style="display: flex; align-items: center; gap: 4px; font-size: 14px; color: #56635E">45 Min<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
+      </a>
+      <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 60px; padding: 0 16px; border-bottom: 1px solid #E3E7E1">
+        <span style="font-size: 14px; color: #56635E">Sa 21.</span>
+        <span style="display: flex; align-items: center; gap: 8px; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: #B9CC85"></span>Locker</span>
+        <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums">3 km</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 60px; padding: 0 16px">
+        <span style="font-size: 14px; color: #56635E">So 22.</span>
+        <span style="display: flex; align-items: center; gap: 8px; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: #2F5D50"></span>Langer Lauf</span>
+        <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums">6 km</span>
+      </div>
+    </section>
+
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <p style="margin: 0; font-size: 15px"><strong style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 22px; font-variant-numeric: tabular-nums">21 km</strong> und 2 Krafteinheiten diese Woche</p>
+      <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #56635E">Den Plan für nächste Woche erstellt der Coach am Sonntagabend aus deinen Einträgen.</p>
+    </div>
+  </main>
+
+  <nav aria-label="Hauptnavigation" style="height: 72px; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #D5DBD3; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 6px 8px 12px">
+    <a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>Heute</a>
+    <a href="Plan.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #17302A; font-size: 12px; font-weight: 700">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"></rect><path d="M8 2v4M16 2v4M4 10h16"></path></svg>Plan</a>
+    <a href="Coach.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"></path></svg>Coach</a>
+    <a href="Verlauf.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 44px; text-decoration: none; color: #56635E; font-size: 12px; font-weight: 500">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M2 20h20"></path></svg>Verlauf</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { reverted: false };
+  }
+  renderVals() {
+    var self = this;
+    var r = this.state.reverted;
+    return {
+      changed: !r,
+      reverted: r,
+      undo: function () { self.setState({ reverted: true }); },
+      redo: function () { self.setState({ reverted: false }); },
+      thuColor: r ? '#C8102E' : '#D9A441',
+      thuLabel: r ? 'Intervalle 6 × 400 m' : 'Tempolauf',
+      thuNote: r ? 'Auf deinen Wunsch beibehalten' : 'Geändert wegen Knie',
+      thuKm: r ? '5 km' : '4 km'
+    };
+  }
+}
+</script>
+</body>
+</html>

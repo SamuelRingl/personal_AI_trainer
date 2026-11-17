@@ -1,0 +1,30 @@
+# Server (Linux, no GPU):   docker compose --profile ollama up -d --build
+# Mac (Ollama runs natively): OLLAMA_URL=http://host.docker.internal:11434 docker compose up -d --build
+
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:////data/trainer.db
+      OLLAMA_URL: ${OLLAMA_URL:-http://ollama:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:0.5b}
+      CORS_ORIGINS: ${CORS_ORIGINS:-["http://localhost:5173"]}
+    volumes:
+      - db-data:/data            # SQLite file survives container rebuilds
+    extra_hosts:
+      - "host.docker.internal:host-gateway"   # reach a natively running Ollama
+
+  ollama:
+    image: ollama/ollama:0.12.3
+    profiles: ["ollama"]         # only started with --profile ollama
+    restart: unless-stopped
+    volumes:
+      - ollama-models:/root/.ollama   # downloaded models survive restarts
+    # no ports published: only the backend talks to Ollama
+
+volumes:
+  db-data:
+  ollama-models:
